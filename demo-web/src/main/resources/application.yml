@@ -15,7 +15,6 @@ spring:
         maxIdle: 8
         maxWait: -1
     slave:
-      enable: false
       database: 1
 #      host: 172.16.13.131
       port: 6380
