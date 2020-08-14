@@ -1,5 +1,0 @@
-cn\maitian\demo\starter\service\MonitorService.class
-cn\maitian\demo\starter\service\DemoService.class
-cn\maitian\demo\starter\service\impl\DemoServiceImpl.class
-cn\maitian\demo\starter\config\DemoAutoConfiguration.class
-cn\maitian\demo\starter\service\impl\RedisMonitorServiceImpl.class
