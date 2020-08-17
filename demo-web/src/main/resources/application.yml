@@ -2,6 +2,25 @@ server:
   port: 7072
 
 spring:
+  datasource:
+##h2持久化时才需要配置
+#    url: jdbc:h2:file:d:/h2/examples
+#    #使用~标明位置 "~"这个符号代表的就是当前用户对应的用户目录
+#    #url: jdbc:h2:file:~/.h2/examples
+#    username: sa
+#    password: sa
+#    driverClassName: org.h2.Driver
+
+#   hsqldb持久化时才需要配置
+    url: jdbc:hsqldb:file:d:/hsqldb/examples
+    username: sa
+    password: sa
+    driverClassName: org.hsqldb.jdbcDriver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
   redis:
     master:
       database: 1
