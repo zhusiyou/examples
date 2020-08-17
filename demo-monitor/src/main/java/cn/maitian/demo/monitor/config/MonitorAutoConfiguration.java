@@ -12,5 +12,5 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan(basePackages = {"cn.maitian.demo.monitor"})
 @ConditionalOnWebApplication
-public class MonitoryAutoConfiguration {
+public class MonitorAutoConfiguration {
 }

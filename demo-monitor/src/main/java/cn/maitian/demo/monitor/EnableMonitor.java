@@ -1,7 +1,6 @@
 package cn.maitian.demo.monitor;
 
-import cn.maitian.demo.monitor.config.MonitoryAutoConfiguration;
-import org.springframework.context.annotation.ComponentScan;
+import cn.maitian.demo.monitor.config.MonitorAutoConfiguration;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.Documented;
@@ -20,6 +19,6 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target(TYPE)
 @Retention(RUNTIME)
 //@ComponentScan(basePackages = {"cn.maitian.demo.monitor"})
-@Import({MonitoryAutoConfiguration.class})
+@Import({MonitorAutoConfiguration.class})
 public @interface EnableMonitor {
 }
