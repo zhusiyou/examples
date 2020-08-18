@@ -20,7 +20,7 @@ public class Role {
 
     @Id
     @GeneratedValue(generator  = "idStrategy")
-    @GenericGenerator(name = "idStrategy", strategy = "uuid")
+    @GenericGenerator(name = "idStrategy", strategy = "uuid2")
     private String id;
 
     private String roleName;

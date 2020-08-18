@@ -17,16 +17,13 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue(generator  = "idStrategy")
-    @GenericGenerator(name = "idStrategy", strategy = "uuid")
+    @GenericGenerator(name = "idStrategy", strategy = "uuid2")
     private String id;
 
     private String userName;
     private String password;
     private Integer age;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "t_user_role",
-            joinColumns = {@JoinColumn(name = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "role_id")})
+    @ManyToMany
     private List<Role> roles;
 }
