@@ -4,6 +4,7 @@ import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * @author: zhudawei
@@ -22,4 +23,10 @@ public class User {
     private String userName;
     private String password;
     private Integer age;
+
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "t_user_role",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "role_id")})
+    private List<Role> roles;
 }

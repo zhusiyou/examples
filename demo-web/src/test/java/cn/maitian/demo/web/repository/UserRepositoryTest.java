@@ -25,8 +25,8 @@ public class UserRepositoryTest {
     private UserRepository userRepository;
 
     @Test
-    @Transactional
-    @Rollback
+//    @Transactional
+//    @Rollback
     public void testAdd(){
         User user = new User();
         user.setAge(5);
@@ -47,5 +47,12 @@ public class UserRepositoryTest {
     public void testDelete(){
         userRepository.deleteAll();
         Assert.assertTrue(userRepository.findAll().size()==0);
+    }
+
+    @Test
+    public void testGet(){
+        User user = userRepository.getOne("402837ba73fbca540173fbca5bc60000");
+        Assert.assertTrue(user.getRoles().size() == 1);
+        Assert.assertTrue(user.getRoles().get(0).getRoleName().equals("admin"));
     }
 }
