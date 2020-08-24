@@ -17,6 +17,7 @@ import javax.persistence.criteria.Join;
 import javax.persistence.criteria.JoinType;
 import javax.persistence.criteria.Predicate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -40,7 +41,12 @@ public class UserRepositoryTest {
         user.setUserName("jack");
         user.setPassword("123");
 
-        userRepository.save(user);
+        User user1 = new User();
+        user1.setAge(5);
+        user1.setUserName("tom");
+        user1.setPassword("123");
+
+        userRepository.saveAll(Arrays.asList(user, user1));
 
         System.out.println(user.getId());
         Assert.assertNotNull(user.getId());
