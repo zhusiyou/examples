@@ -20,12 +20,20 @@
     </properties>
 
     <modules>
+        <module>demo-wendao</module>
         <module>demo-starter</module>
         <module>demo-monitor</module>
         <module>demo-web</module>
     </modules>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <optional>true</optional>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>

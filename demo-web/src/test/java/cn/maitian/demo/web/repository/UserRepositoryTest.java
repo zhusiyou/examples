@@ -88,4 +88,13 @@ public class UserRepositoryTest {
 //        Assert.assertTrue(users.getContent().get(0).getUserName().equals("tom"));
 
     }
+
+    @Test
+    public void testWendao(){
+        List<User> list = userRepository.finaAllFromWendao();
+        Assert.assertTrue(list.size()>0);
+
+        List<User> list2 = userRepository.finaAllFromWendaoNative();
+        Assert.assertTrue(list2.size()>0);
+    }
 }
